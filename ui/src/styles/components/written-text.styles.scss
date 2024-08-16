@@ -1,0 +1,24 @@
+@import '../main.styles.scss';
+
+.written-text {
+    transition: all .2s;
+    &__options {
+        font-weight: bold;
+        letter-spacing: .1rem;
+        @include translucent-background($color-primary-oj);
+        padding: 1rem;
+        margin: 1rem 0;
+        @include basic-bordered-box($color-secondary-yellow);
+        @include basic-drop-shadow;
+
+        &:hover{
+            cursor: pointer;
+            
+            transform: translateX(1rem);
+        }
+
+        &:active {
+            transform: translateX(-.5rem) scale(.99);
+        }
+    }
+}

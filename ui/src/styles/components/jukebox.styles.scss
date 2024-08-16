@@ -1,0 +1,76 @@
+@import '../main.styles.scss';
+
+.jukebox {
+    display: flex;
+    align-items: center;
+
+    color: $color-primary-blue;
+
+    background-color: rgba($color-primary-red, .7);
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    @include basic-drop-shadow;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        
+        position: absolute;
+        right: 0;
+        margin: .5rem;
+        z-index: 2;
+    }
+
+    &__play-button {
+        width: 4rem;
+        height: 3rem;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all .2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-.5rem);
+        }
+
+        &:active {
+            transform: translateY(-.2rem);
+            color: $color-primary-yellow;
+        }
+
+        &--active {
+            @include musicNoteAnimation;
+            color: $color-primary-yellow;
+        }
+    }
+
+    &__timer {
+        &--active {
+            color: $color-primary-yellow;
+            @include colorTransitionsAnimation;
+        }
+    }
+    
+    &__click-me {
+        height: 0;
+        display: flex;
+        align-items: center;
+        
+        color: $color-primary-red;
+        font-weight: bold;
+        
+        padding-right: 2rem;
+        
+        &--arrow {
+            margin-top: -.5rem;
+            font-size: 4rem;
+            font-weight: initial;
+            
+            @include pointyAnimation;
+        }
+    }
+
+}

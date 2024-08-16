@@ -1,0 +1,15 @@
+body {
+    background-size: 400% 400%;
+    background: linear-gradient(0, $color-black-blue, $color-black-purple);
+}
+.App {
+    height: 100vh;
+    &--window {
+            @include basic-drop-shadow;
+    }
+}
+.game {
+    &--wrapper {
+            @include basic-drop-shadow;
+    }
+}

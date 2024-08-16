@@ -1,0 +1,32 @@
+@import '../main.styles.scss';
+
+.warning-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 4rem;
+
+    @include basic-drop-shadow;
+    @include translucent-background($color-primary-red);
+    @include basic-bordered-box($color-primary-red);
+    @include basic-drop-shadow;
+
+    &--wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: $color-black-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        margin: 4rem 0;
+        color: $color-white;
+        font-weight: bold;
+    }
+}
+

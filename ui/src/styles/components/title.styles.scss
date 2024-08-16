@@ -1,0 +1,40 @@
+@import '../main.styles.scss';
+
+.title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // background: linear-gradient(0, $color-black-blue, $color-black-purple);
+
+    &__logo {
+        //width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__text {
+        color: white;
+        margin: 2rem 0;
+    }
+    
+    &__button {
+        position: relative;
+        z-index: 1;
+        //top: 25rem;
+        //justify-self: end;
+        
+        @include bounce-animation;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+

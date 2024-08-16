@@ -1,0 +1,214 @@
+/********************
+        BASE
+********************/
+
+/******
+
+    - Responsive Breakpoints
+    - Browser Reset
+    - Animations
+    - Typography
+    - Utilities
+    - Shared Styles
+
+******/
+
+/******
+
+REM sizing used for styling
+base size: 1rem = 10px
+
+def:
+    - base browser sizes at 16px
+    - changed to 62.5% to equal 10px
+    - conversions are (desired px size)/16px
+        - change to percent
+
+******/
+
+/***************************
+    RESPONSIVE BREAKPOINTS
+
+  runs off of em
+  1em = 16px
+
+  0 - 600px     = Phone
+  601 - 900px   = Tablet Portrait
+  901 - 1200px  = Tablet Landscape
+
+  [1200 - 1800] = basic desktop styling
+  1800+ px      = large desktops
+
+
+  $breakpoints: 
+
+    - small-phone
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+
+****************************/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media only screen and (max-width: 31.25em) { @content }; //500px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; //600px
+    }
+    @if $breakpoint == large-phone {
+        @media only screen and (max-width: 43.75em) { @content };  //700px
+    }
+    @if $breakpoint == between-phone-tab {
+        @media only screen and (max-width: 50em) { @content }; //800px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (max-width: 112.5em) { @content }; //1800px
+    }
+}
+
+/********************
+    BROWSER RESET
+********************/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1rem = 10px
+}
+body {
+  box-sizing: border-box;
+}
+
+/********************
+    ANIMATIONS
+********************/
+
+@keyframes bounce {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    10% {
+      transform: scale(0.8, 1.2);
+    }
+    30% {
+      transform: scale(1.1, 0.8) translateX(-5px);
+    }
+    50% {
+      transform: scale(0.8, 1.2) translateX(2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pointy {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+    10% {
+        transform: translateX(1.3rem) scale(1);
+    }
+    20% {
+        transform: translateX(0) scale(.95, 1);
+    }
+    30% {
+        transform: translateX(.7rem) scale(1);
+    }
+    35% {
+        transform: translateX(0) scale(.98, 1);
+    }
+    40% {
+        transform: translateX(.3rem) scale(1);
+    }
+    45% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(0);
+    }
+  }
+  
+  @keyframes ticktock {
+    0% {
+      transform: rotate(25deg);
+    }
+    40% {
+      transform: rotate(25deg);
+    }
+    50% {
+      transform: rotate(-25deg);
+    }
+    90% {
+      transform: rotate(-25deg);
+    }
+    100% {
+      transform: rotate(25deg);
+    }
+  }
+  
+  @keyframes colorTransitions {
+    0% {
+      color: $color-primary-yellow;
+    }
+    33% {
+      color: $color-primary-blue;
+    }
+    66% {
+      color: $color-primary-red;
+    }
+    100% {
+      color: $color-primary-yellow;
+    }
+  }
+
+/********************
+    TYPOGRAPHY
+********************/
+
+body {
+    font-family: $body-font;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: $heading-font;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+/********************
+    UTILITIES
+********************/
+
+/********************
+    SHARED STYLES
+********************/
+

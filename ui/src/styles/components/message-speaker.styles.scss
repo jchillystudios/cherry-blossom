@@ -1,0 +1,19 @@
+@import '../main.styles.scss';
+
+.message-speaker {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    line-height: 0;
+    margin: -1rem 0 2rem 0;
+    padding: 2rem;
+    display: inline-block;    
+    
+    @include translucent-background($color-primary-red);
+    @include basic-bordered-box($color-primary-red);
+    @include basic-drop-shadow;
+    
+    &--maincharacter {
+        @include translucent-background($color-primary-blue);
+        @include basic-bordered-box($color-primary-blue);
+    }
+}

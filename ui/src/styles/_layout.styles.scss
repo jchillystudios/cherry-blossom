@@ -1,0 +1,47 @@
+/********************
+        LAYOUT
+********************/
+
+/******
+
+    - Grid
+    - Universal
+
+******/
+
+/********************
+        GRID
+********************/
+
+.App {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 
+                [full-start] minmax(6rem, 1fr)
+                [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+                [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+main {
+        grid-column: center-start/center-end;
+        grid-row: 2;
+        height: 68vh;
+        
+        @include respond(tab-port){
+                grid-column: full-start/full-end;
+        }
+}
+
+/********************
+        UNIVERSAL
+********************/
+.App {
+        &--window {
+                position: relative;
+        }
+}
+.game {
+        &--wrapper {
+                position: relative;
+        }
+}

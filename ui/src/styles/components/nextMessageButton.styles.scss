@@ -1,0 +1,43 @@
+@import '../main.styles.scss';
+
+.next-message-button {
+    display: flex;
+    justify-content: flex-end;
+
+    &--wrapper {
+        width: 7rem;
+        height: 7rem;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            //transition: all .2s ease-in;
+            @include bounce-animation;
+        }
+    }
+
+    &--arrow, &--circle {
+        position: absolute;
+    }
+    
+    &--arrow {
+        top: -1rem;
+        font-size: 5rem;
+        color: $color-primary-red;
+        z-index: 1;
+    }
+
+    &--circle {
+        @include translucent-background($color-primary-yellow);
+        border: .2rem solid $color-primary-yellow;
+        border-radius: 5rem;
+        width: 7rem;
+        height: 7rem;
+        @include basic-drop-shadow;
+    }
+
+}

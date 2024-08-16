@@ -1,0 +1,23 @@
+@import '../main.styles.scss';
+
+.custom-button {
+    transition: all .3s;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-white;
+    text-transform: uppercase;
+
+    background-color: $color-primary-red;
+    border: .2rem solid $color-secondary-red;
+    @include basic-drop-shadow;
+    
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-.5rem);
+    }
+
+    &:active {
+        transform: translateY(.2rem);
+    }
+}

@@ -1,0 +1,85 @@
+/********************
+        ABSTRACT
+********************/
+
+/******
+
+    - Variables
+    - Functions
+    - Mixins
+
+******/
+
+/********************
+    VARIABLES
+********************/
+
+//COLORS
+
+$color-primary-red:     #FF1447;    //main brand color
+$color-primary-yellow:  #FFF32E;    //main brand color
+$color-primary-blue:    #2EC6FF;
+$color-primary-oj:      #FF8A0F;    //main brand color
+
+$color-secondary-red:   #B32440;
+$color-secondary-blue:  #0583B3;
+$color-secondary-yellow:#B3AD35;
+$color-secondary-oj:    #B36F26;
+
+$color-black-blue:       #030021;
+$color-black-purple:    #140029;
+$color-black:           #000; 
+$color-white:           #FFF;
+
+
+//FONTS
+
+$body-font:             'Prompt', sans-serif;
+$heading-font:          'Staatliches', cursive;
+$styled-font:           'Mr Dafoe', cursive;
+
+/********************
+    FUNCTIONS
+********************/
+
+/********************
+    MIXINS
+********************/
+
+@mixin basic-drop-shadow {
+    box-shadow: 0 1rem 1.5rem rgba($color-black, .3); 
+}
+
+@mixin translucent-background($color) {
+    background-color: rgba($color, .75);
+}
+
+@mixin basic-bordered-box($color) {
+    border: .2rem solid $color;
+    border-radius: 1rem;
+}
+
+//Animation Mixins
+
+@mixin bounce-animation {
+    animation-name: bounce;
+    animation-duration: 1s;
+}
+
+@mixin musicNoteAnimation {
+    animation: 8s ease-in-out infinite colorTransitions,
+                3.84s ease-in-out infinite ticktock;
+}
+
+@mixin pointyAnimation {
+    animation-name: pointy;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@mixin colorTransitionsAnimation {
+    animation-name: colorTransitions;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}

@@ -1,0 +1,22 @@
+@import '../main.styles.scss';
+
+.chat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    &--wrapper {
+        width: 100%;
+        min-height: 20rem;
+        padding: 2rem 5rem;
+        @include translucent-background($color-primary-red);
+        @include basic-drop-shadow;
+        @include basic-bordered-box($color-primary-red);
+
+        color: $color-white;
+    }
+  }

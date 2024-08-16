@@ -6,7 +6,7 @@ Cherry Blossom is a basic choose-your-adventure/visual novel engine built on [Re
 
 [For the Love of Fieri](https://ftlof.wunderwizard.com/), a dating simulator where you play as Guy Fieri dating the hot 🌶️ foods around town, was built on Cherry Blossom.
 
-CSS/Sass styling done by [@victoria-jones](https://github.com/victoria-jones). See `ui/public/img` for art files, `src/styles` for Sass CSS files.
+CSS/Sass styling was done by [@victoria-jones](https://github.com/victoria-jones). See `ui/public/img` for art files, `src/styles` for Sass CSS files.
 
 To view [Mermaid JS](https://mermaid.js.org/) diagrams in VSCode, install the [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) extension.
 
@@ -54,8 +54,8 @@ Characters are defined in `ui/data/Characters.tsx`, where art can be placed in `
 ```typescript
 {
     "id": 1,
-    "name": "Blue Cherry", // character ID
-    "alignment": "left", // character name
+    "name": "Blue Cherry",
+    "alignment": "left", // which side of the screen the character is on
     "description": "A cute blue cherry character", // character description (for developer, not shown to user)
     "img_path": "img/character/blue-cherry.png" // path to character image (for now, can only show one image; in future, this could be a map of image path by character emotion, so different image shows on different character emotion)
 }
@@ -79,35 +79,24 @@ The base building block of a Cherry Blossom game is the Event. Building a game w
 
 Events are defined in the files in the folder `src/data/events_data`. Each file defines an Event.
 
-Here is an example Event created at the file path `src/data/events_data/example-event.tsx`:
+The following is an simple example Event. See the full event at `src/data/events_data/1-orange-event.tsx`.
 
 ```typescript
 export const EXAMPLE_EVENT = {
     "id": 1,
-    "description": "My first event", // description for internal use
-    "location": "The Park", // links to name of location defined in Locations file
-    "characters": ["Blue Cherry"], // links to name of character(s) defined in Characters file
+    "description": "Example Event",
+    "location": "Orange Background",
+    "characters": ["Blue Cherry"],
     "messages": [
         {
             "id": 1,
-            "speaker": "System", // defines who is speaking. If "System", does not show name on message, otherwise if a character name, shows name of character saying the message at top of the message display.
-            "text": "This is the first message of the game", // content of the message displayed
+            "speaker": "Blue Cherry",
+            "text": "Welcome to Cherry Blossom!",
             "emotion": "bold",
-            "to_event_id": -1, // -1 means ignored, passes onto options below. If to_event_id provided, the game immediately plays that event after the message plays (without showing options)
-            "options": [
-                {
-                    "id": 1,
-                    "text": "Man oh man! You betcha, big Mac Daddy.", // content of the option displayed
-                    "to_event_id": 2 // transfers to Event # 2 if user selects this option
-                },
-                {
-                    "id": 2,
-                    "text": "Nah, I'm gonna go home and think about things.", // content of the option displayed
-                    "to_event_id": -1 // ignored, passes to next message if event has another message
-                },
-            ],
-            "sound_path": "", // Input path to an audio file to play the sound when the message plays. Example: "sounds/phone_buzzing.mp3".
-            "input_required": "" // if "?", accepts any input, otherwise if not "", only accepts exact (case insensitive) input
+            "to_event_id": -1,
+            "options": [],
+            "sound_path": "",
+            "input_required": ""
         },
     ]
 }

@@ -1,6 +1,6 @@
 # Cherry Blossom
 
-<img src="docs/logo.png" width="250px" style="image-rendering: pixelated;" />
+<img src="docs/game-window.png" width="500px" style="image-rendering: pixelated;" />
 
 Cherry Blossom is a basic choose-your-adventure/visual novel engine built on [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/).
 

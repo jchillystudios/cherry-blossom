@@ -61,7 +61,9 @@ Characters are defined in `ui/data/Characters.tsx`, where art can be placed in `
 }
 ```
 
-The main character in the game is aligned `left`, all other characters are aligned `right`.
+The main character in the game is aligned `left`, all other characters are aligned `right`. In this example game, Blue Cherry is the main character. You can modify this behavior in `src/components/MessageSpeaker.tsx`.
+
+<img src="docs/purple-event.png" width=500px />
 
 ### Defining Locations
 Locations within the game are defined in `ui/data/Locations.tsx`. Background art can be placed in `ui/public/img/background`, background music can be placed in `ui/public/sounds`. Here is an example of how to define a location (without background music):

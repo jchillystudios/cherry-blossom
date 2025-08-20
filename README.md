@@ -4,8 +4,6 @@
 
 Cherry Blossom is a basic choose-your-adventure/visual novel engine built on [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/).
 
-[For the Love of Fieri](https://ftlof.wunderwizard.com/), a dating simulator where you play as Guy Fieri dating the hot 🌶️ foods around town, was built on Cherry Blossom.
-
 CSS/Sass styling was done by [@victoria-jones](https://github.com/victoria-jones). See `ui/public/img` for art files, `src/styles` for Sass CSS files.
 
 To view [Mermaid JS](https://mermaid.js.org/) diagrams in VSCode, install the [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) extension.
@@ -228,7 +226,7 @@ Note the unreachable event shown. This event is installed in the game, but no ot
 
 To shut off coloring the solution path, set `SHOW_SOLUTION_PATH = false` in `src/components/Visualizer.tsx`. You can also shut off showing node labels by setting `SHOW_NODE_LABELS = false` (which can be useful if you want to share a screenshot of how cool your game's graph is, but don't want to give away the solution so easily).
 
-For fun, here's the visualizer for [For the Love of Fieri](https://ftlof.wunderwizard.com/)!
+[For the Love of Fieri](https://ftlof.wunderwizard.com/), a dating simulator where you play as Guy Fieri dating the hot 🌶️ foods around town, was built on Cherry Blossom. For fun, here's the visualizer for [For the Love of Fieri](https://ftlof.wunderwizard.com/)!
 
 <img src="docs/visualizer-ftlof.png" width="1000px">
 
